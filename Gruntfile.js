@@ -5,6 +5,25 @@ module.exports = function(grunt) {
     // Project configuration
     grunt.initConfig({
   
+      // git fetch -A
+      gitfetch: {
+        task: {
+          options: {
+            all: true,
+            cwd: 'git-commit-Child-Project'
+          }
+        }
+      },
+
+      // git pull
+      gitpull: {
+        task: {
+          options: {
+            cwd: 'git-commit-Child-Project'
+          }
+        }
+      },
+
       // git add -A
       gitadd: {
         task: {
@@ -41,6 +60,8 @@ module.exports = function(grunt) {
   
     // Create task
     grunt.registerTask('git', [
+      'gitfetch',
+      'gitpull',
       'gitadd',
       'gitcommit',
       'gitpush'

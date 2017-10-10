@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           options: {
             force: true,
             all: true,
-            cwd: '.'
+            cwd: 'git-commit-Child-Project'
           }
         }
       },
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
           options: {
             message: 'Repository updated on ' + grunt.template.today(),
             allowEmpty: true,
-            cwd: '.'
+            cwd: 'git-commit-Child-Project'
           }
         }
       },
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
           options: {
             remote: 'origin',
             branch: 'master',
-            cwd: '.'
+            cwd: 'git-commit-Child-Project'
           }
         }
       }
